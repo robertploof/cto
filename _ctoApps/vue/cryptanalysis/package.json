@@ -11,12 +11,21 @@
     "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
     "serve": "http-server -o -c 1 -a localhost",
     "dev": "npm-run-all --parallel watchify serve",
-    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js"
+    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "browserify": {
     "transform": [
       "vueify",
-      ["babelify", {"presets": ["es2015"]}]
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
     ]
   },
   "browser": {
@@ -28,7 +37,8 @@
     "socket.io-client": "1.7.2",
     "threads": "^0.7.2",
     "vue": "^2.1.4",
-    "worker-pouch": "^2.0.0"
+    "worker-pouch": "^2.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -48,5 +58,6 @@
     "vue-socket.io": "^2.1.0",
     "vueify": "^9.0.0",
     "watchify": "^3.4.0"
-  }
+  },
+  "snyk": true
 }
