@@ -1,0 +1,47 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - worker-pouch > pouchdb-core > pouchdb-debug > debug:
+        patched: '2023-07-19T06:13:02.195Z'
+        id: 'npm:debug:20170905'
+        path: worker-pouch > pouchdb-core > pouchdb-debug > debug
+  'npm:hoek:20180212':
+    - worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > hawk > hoek:
+        patched: '2023-07-19T06:13:02.195Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > hawk >
+          hoek
+    - worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > hawk > boom > hoek:
+        patched: '2023-07-19T06:13:02.195Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > hawk >
+          boom > hoek
+    - worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > hawk > sntp > hoek:
+        patched: '2023-07-19T06:13:02.195Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > hawk >
+          sntp > hoek
+    - worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > hawk > cryptiles > boom > hoek:
+        patched: '2023-07-19T06:13:02.195Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > hawk >
+          cryptiles > boom > hoek
+  'npm:ms:20170412':
+    - worker-pouch > pouchdb-core > pouchdb-debug > debug > ms:
+        patched: '2023-07-19T06:13:02.195Z'
+        id: 'npm:ms:20170412'
+        path: worker-pouch > pouchdb-core > pouchdb-debug > debug > ms
+  'npm:tunnel-agent:20170305':
+    - worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request > tunnel-agent:
+        patched: '2023-07-19T06:13:02.195Z'
+        id: 'npm:tunnel-agent:20170305'
+        path: >-
+          worker-pouch > pouchdb-adapter-http > pouchdb-ajax > request >
+          tunnel-agent
