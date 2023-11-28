@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "pouchdb-browser": "^6.1.1",
-    "socket.io": "1.7.2",
-    "socket.io-client": "1.7.2",
+    "socket.io": "2.0.0",
+    "socket.io-client": "2.0.0",
     "threads": "^0.7.2",
     "vue": "^2.1.4",
     "worker-pouch": "^2.0.0"
